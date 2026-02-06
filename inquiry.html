@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Submit a wholesale inquiry for bulk orders of cosmetics. Provide your details and product interests.">
+    <title>Wholesale Inquiry - Wholesale Cosmetics</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="images/logo.png" alt="Wholesale Cosmetics Logo">
+            <h1>Wholesale Cosmetics</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="inquiry.html">Wholesale Inquiry</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="inquiry">
+        <div class="container">
+            <h2>Wholesale Inquiry</h2>
+            <p>Please fill in the details below. Our team will contact you shortly.</p>
+
+            <form id="wholesale-form">
+                <label>Name</label>
+                <input type="text" id="name" required>
+
+                <label>Business Name</label>
+                <input type="text" id="business" required>
+
+                <label>Phone / WhatsApp Number</label>
+                <input type="text" id="phone" required>
+
+                <label>Product Interested In</label>
+                <select id="product">
+                    <option>Face Wash</option>
+                    <option>Body Spray</option>
+                    <option>baby accessories</option>
+                    <option>Creams</option>
+                    <option>Makeup</option>
+                    <option>shampoo</option>
+                    <option>body wash</option>
+                    <option>razor</option>
+                    <option>toothpaste</option>
+                    <option>revlon hair color</option>
+                </select>
+
+                <label>Estimated Quantity</label>
+                <input type="text" id="quantity" required>
+
+                <button type="submit" class="cta-button">Send Inquiry via WhatsApp</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Wholesale Cosmetics. All rights reserved.</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/+92 3400357609" class="whatsapp-float" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+</a>
+
+<script>
+document.getElementById("wholesale-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let business = document.getElementById("business").value;
+    let phone = document.getElementById("phone").value;
+    let product = document.getElementById("product").value;
+    let quantity = document.getElementById("quantity").value;
+
+    let message = `Wholesale Inquiry:%0A
+Name: ${name}%0A
+Business: ${business}%0A
+Phone: ${phone}%0A
+Product: ${product}%0A
+Quantity: ${quantity}`;
+
+    window.open(`https://wa.me/923400357609?text=${message}`, "_blank");
+});
+</script>
+
+</body>
+</html>
